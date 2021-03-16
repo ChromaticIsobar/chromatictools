@@ -44,6 +44,9 @@ setuptools.setup(
     "lint": [
       "pylint",
     ],
+    "cov": [
+      "coverage",
+    ],
   },
   classifiers=[
     "Programming Language :: Python :: 3",

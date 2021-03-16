@@ -17,6 +17,9 @@ recommonmark
 # Pylint
 pylint
 
+# Coverage
+coverage
+
 # Notebooks
 jupyter
 tqdm
