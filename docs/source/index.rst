@@ -2,8 +2,8 @@
 
 .. mdinclude:: ../../README.md
 
-Package
-=======
+ChromaticTools Package
+======================
 
 .. toctree::
    :maxdepth: 1

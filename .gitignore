@@ -19,3 +19,7 @@ docs/source/*.rst
 # Configuration files
 *.conf
 *.gin
+
+# Coverage
+htmlcov
+.coverage
