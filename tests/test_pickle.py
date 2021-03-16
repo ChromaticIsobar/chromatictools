@@ -26,7 +26,7 @@ class TestPickle(unittest.TestCase):
 
   def test_property_version(self):
     """Test pickle cache decorator with properties"""
-    class Cached:
+    class Cached:  # pylint: disable=C0115
       def __init__(self, name, path="cached_name"):
         self.name = name
         self._path = path
@@ -46,15 +46,8 @@ class TestPickle(unittest.TestCase):
     os.remove(Cached(None).path)
 
   def test_raise_not_implemented(self):
-    """Test that NotImplementedError is raise for unsupported types"""
-    ex = None
-    try:
+    """Test that NotImplementedError is raised for unsupported types"""
+    with self.assertRaises(NotImplementedError):
       @pickle.pickled_cache(None)
-      def echo(s):
+      def echo(s):  # pylint: disable=W0612
         return s
-    except NotImplementedError as e:
-      ex = e
-      msg = str(e)
-    else:
-      msg = "No exceptions raised"
-    self.assertTrue(isinstance(ex, NotImplementedError), msg=msg)
