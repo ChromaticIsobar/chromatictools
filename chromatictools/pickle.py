@@ -141,6 +141,7 @@ def pickled_cache(
     'Bob'
     >>> import os
     >>> os.remove(cache_file)
+
   Remove cache for inter-session repeatability (otherwise,
   the second time the example is run, the first `echo("Alice")`
   would return `"Bob"`). In a real scenario, you probably wouldn't
