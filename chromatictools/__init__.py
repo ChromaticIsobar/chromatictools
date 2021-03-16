@@ -1,4 +1,6 @@
-"""Copyright (c) 2021 Marco Tiraboschi
+"""Package of utilities that I use for my own research
+
+Copyright (c) 2021 Marco Tiraboschi
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
