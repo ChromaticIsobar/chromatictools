@@ -1,0 +1,22 @@
+# Core
+numpy
+
+# Config
+gin-config
+
+# Plots
+matplotlib
+seaborn
+
+# Docs
+sphinx
+sphinx_rtd_theme
+m2r2
+recommonmark
+
+# Pylint
+pylint
+
+# Notebooks
+jupyter
+tqdm
