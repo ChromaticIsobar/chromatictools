@@ -18,14 +18,14 @@ class TestCoverage(unittestmixins.AssertPrintsMixin, unittest.TestCase):
   def test_na(self):
     """Test N/A when file is not found"""
     with self.assert_prints(
-      "https://img.shields.io/badge/coverage-N/A-ff0000\n"
+      "https://img.shields.io/badge/coverage-N/A-d80000\n"
     ):
       badges.main("coverage", "-c", "_v_i__fq_ph")
 
   def test_100(self):
     """Test 100% coverage"""
     with self.assert_prints(
-      "https://img.shields.io/badge/coverage-100%25-00ff2a\n"
+      "https://img.shields.io/badge/coverage-100%25-00d824\n"
     ):
       badges.main("coverage", "-c", self.filename)
 
@@ -48,14 +48,14 @@ class TestPylint(unittestmixins.AssertPrintsMixin, unittest.TestCase):
   def test_na(self):
     """Test N/A when file is not found"""
     with self.assert_prints(
-      "https://img.shields.io/badge/pylint-N/A-ff0000\n"
+      "https://img.shields.io/badge/pylint-N/A-d80000\n"
     ):
       badges.main("pylint", "-l", "_v_i__fq_ph")
 
   def test_100(self):
     """Test 100% coverage"""
     with self.assert_prints(
-      "https://img.shields.io/badge/pylint-10.00%2F10-00ff2a\n"
+      "https://img.shields.io/badge/pylint-10.00%2F10-00d824\n"
     ):
       badges.main("pylint", "-l", self.filename)
 
