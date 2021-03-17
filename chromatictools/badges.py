@@ -35,7 +35,7 @@ class HuePercentBadge:
     hue_100: float = 130,
     hue_gamma: float = 1,
     saturation: float = 1,
-    value: float = 1,
+    value: float = 0.85,
     fmt: str = "https://img.shields.io/badge/{label}-{message}-{color}",
   ):
     self.filename = filename
