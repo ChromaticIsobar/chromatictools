@@ -23,3 +23,7 @@ docs/source/*.rst
 # Coverage
 htmlcov
 .coverage
+coverage.json
+
+# Pylint
+pylint.txt
