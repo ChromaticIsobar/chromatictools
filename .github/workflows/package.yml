@@ -70,7 +70,8 @@ jobs:
 
   sphinx:
     runs-on: ubuntu-latest
-    container: sphinxdoc/sphinx-latexpdf
+    container: sphinxdoc/sphinx
+#    container: sphinxdoc/sphinx-latexpdf
     steps:
       - uses: actions/checkout@v2
         with:
