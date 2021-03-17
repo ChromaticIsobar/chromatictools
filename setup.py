@@ -24,17 +24,8 @@ setuptools.setup(
   setup_requires=[
     "wheel",
   ],
-  install_requires=[
-    "gin-config",
-    "numpy",
-  ],
+  install_requires=[],
   extras_require={
-    "notebooks": [
-      "jupyter",
-      "matplotlib",
-      "seaborn",
-      "tqdm",
-    ],
     "docs": [
       "sphinx",
       "sphinx_rtd_theme",
