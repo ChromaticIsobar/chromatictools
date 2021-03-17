@@ -26,17 +26,20 @@ class TestPickle(unittest.TestCase):
 
   def test_property_version(self):
     """Test pickle cache decorator with properties"""
-    class Cached:  # pylint: disable=C0115
+    class Cached:
+      """Dummy class for pickled cache test with properties"""
       def __init__(self, name, path="cached_name"):
         self.name = name
         self._path = path
 
       @property
       def path(self):
+        """Cache-filepath property"""
         return self._path
 
       @pickle.pickled_cache(path)
       def echo(self):
+        """Dummy cached method"""
         return self.name
 
     with self.subTest(step="check echo is the same"):
