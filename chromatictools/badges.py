@@ -1,14 +1,35 @@
-"""Generate coverage badge URL from coverage report"""
-from chromatictools import colors
+"""Generate badge URLs from reports
+
+Example:
+
+.. code:: bash
+
+  python -m coverage run -m unittest
+  python -m coverage json --omit "*/tests/*,*/venv/*"
+  python -m chromatictools.badges coverage"""
+from chromatictools import colors, cli
 import argparse
 import json
 from typing import Union
+import sys
 
 
 class HuePercentBadge:
-  """Badge URL generator class based on mapping percentage to hue"""
+  """Badge URL generator class based on mapping percentage to hue
+
+  Args:
+    filename (str): File to read for informtion
+    label (str): Badge label
+    hue_0 (float): Hue at 0 percent. Default is 0 (red)
+    hue_100 (float): Hue at 100 percent. Default is 130 (green)
+    hue_gamma (float): Gamma exponent for hue scale correction
+    saturation (float): Color saturation
+    value (float): Color value
+    fmt (str): URL format string with placeholders for :data:`label`,
+      :data:`message` and :data:`color`"""
   def __init__(
     self,
+    filename: str,
     label: str,
     hue_0: float = 0,
     hue_100: float = 130,
@@ -17,6 +38,7 @@ class HuePercentBadge:
     value: float = 1,
     fmt: str = "https://img.shields.io/badge/{label}-{message}-{color}",
   ):
+    self.filename = filename
     self.label = label
     self.hue_0 = hue_0
     self.hue_100 = hue_100
@@ -27,10 +49,12 @@ class HuePercentBadge:
 
   @property
   def percent(self) -> Union[str, float]:
+    """Percentage score"""
     return "N/A"
 
   @property
   def message(self) -> str:
+    """Badge message"""
     p = self.percent
     if not isinstance(p, str):
       p = "{:.0f}%25".format(p)
@@ -66,11 +90,19 @@ class HuePercentBadge:
     )
 
   def __str__(self) -> str:
+    """Get badge URL"""
     return self.url
 
 
 class CoverageBadge(HuePercentBadge):
-  """Coverage badge utility class"""
+  """Coverage badge utility class
+
+  Args:
+    filename (str): Coverage report JSON file
+    label (str): Badge label. Default is :data:`"coverage"`
+    hue_gamma (float): Gamma exponent for hue scale correction.
+      Default is :data:`6`
+    kwargs: Keyword arguments for :class:`HuePercentBadge`"""
   def __init__(
     self,
     filename: str,
@@ -79,11 +111,11 @@ class CoverageBadge(HuePercentBadge):
     **kwargs,
   ):
     super().__init__(
+      filename=filename,
       label=label,
       hue_gamma=hue_gamma,
       **kwargs
     )
-    self.filename = filename
 
   @property
   def report(self) -> dict:
@@ -98,21 +130,28 @@ class CoverageBadge(HuePercentBadge):
   @property
   def percent(self) -> Union[str, float]:
     """Coverage percentage if found in file, else :data:`"N/A"`"""
-    return self.report.get("totals", {}).get("percent_covered", "N/A")
+    p = self.report.get("totals", {}).get("percent_covered", None)
+    if p is None:
+      p = super().percent
+    return p
 
 
 class PylintBadge(HuePercentBadge):
-  """Pylint badge utility class"""
+  """Pylint badge utility class
+
+  Args:
+    filename (str): Text file output of pylint
+    label (str): Badge label. Default is :data:`"pylint"`
+    kwargs: Keyword arguments for :class:`HuePercentBadge`"""
   def __init__(
     self,
     filename: str,
     label: str = "pylint",
-    hue_gamma: float = 1,
     **kwargs,
   ):
     super().__init__(
+      filename=filename,
       label=label,
-      hue_gamma=hue_gamma,
       **kwargs
     )
     self.filename = filename
@@ -129,30 +168,39 @@ class PylintBadge(HuePercentBadge):
 
   @property
   def percent(self) -> Union[str, float]:
-    """Coverage percentage if found in file, else :data:`"N/A"`"""
+    """Pylint rating (out of 100) if found in file, else :data:`"N/A"`"""
     s = self.report
     prefix = "Your code has been rated at "
     if prefix not in s:
-      return "N/A"
+      return super().percent
     return float(s.split(prefix, 1)[-1].split("/", 1)[0]) * 10
 
   @property
   def message(self) -> str:
+    """Badge Message"""
     p = self.percent
     if not isinstance(p, str):
       p = "{:.2f}%2F10".format(p / 10)
     return p
 
 
-if __name__ == "__main__":
+@cli.main(__name__, *sys.argv[1:])
+def main(*argv):
+  """CLI launcher function
+
+  Args:
+    argv: Command-line arguments
+
+  Returns:
+    int: Exit code"""
   cmds = {
-    "coverage": lambda a: CoverageBadge(a.coverage).url,
-    "pylint": lambda a: PylintBadge(a.pylint).url,
+    "coverage": lambda a: CoverageBadge(a.coverage),
+    "pylint": lambda a: PylintBadge(a.pylint),
   }
-  parser = argparse.ArgumentParser(description=__doc__)
+  parser = argparse.ArgumentParser(description=globals()["__doc__"])
   parser.add_argument(
-    "cmd",
-    help="Command. Should be in {}".format(list(cmds.keys()))
+    "badge",
+    help="Which badge to use. Should be in {}".format(list(cmds.keys()))
   )
   parser.add_argument(
     "-c",
@@ -170,5 +218,6 @@ if __name__ == "__main__":
     required=False,
     help="Pylint report filepath",
   )
-  args = parser.parse_args()
-  print(cmds[args.cmd](args))
+  args = parser.parse_args(argv)
+  print(cmds[args.badge](args))
+  return 0
