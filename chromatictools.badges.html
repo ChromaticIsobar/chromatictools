@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>chromatictools.badges module &mdash; chromatictools 0.0.5 documentation</title>
+  <title>chromatictools.badges module &mdash; chromatictools 0.0.6 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.0.5
+                0.0.6
               </div>
             
           
@@ -96,6 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.cli.html">chromatictools.cli module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.colors.html">chromatictools.colors module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.imports.html">chromatictools.imports module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chromatictools.math.html">chromatictools.math module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.pickle.html">chromatictools.pickle module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.purgithub.html">chromatictools.purgithub module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.unitdoctest.html">chromatictools.unitdoctest module</a></li>
@@ -176,8 +177,8 @@
 <span id="chromatictools-badges-module"></span><h1>chromatictools.badges module<a class="headerlink" href="#module-chromatictools.badges" title="Permalink to this headline">¶</a></h1>
 <p>Generate badge URLs from reports</p>
 <p>Example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m coverage run -m unittest
-python -m coverage json --omit <span class="s2">&quot;*/tests/*,*/venv/*&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m coverage run --source &lt;module&gt; -m unittest
+python -m coverage json
 python -m chromatictools.badges coverage
 </pre></div>
 </div>

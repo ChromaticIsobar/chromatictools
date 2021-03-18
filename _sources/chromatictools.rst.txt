@@ -16,6 +16,7 @@ Submodules
    chromatictools.cli
    chromatictools.colors
    chromatictools.imports
+   chromatictools.math
    chromatictools.pickle
    chromatictools.purgithub
    chromatictools.unitdoctest

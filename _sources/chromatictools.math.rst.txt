@@ -1,0 +1,7 @@
+chromatictools.math module
+==========================
+
+.. automodule:: chromatictools.math
+   :members:
+   :undoc-members:
+   :show-inheritance:
