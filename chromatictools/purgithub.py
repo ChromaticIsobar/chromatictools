@@ -9,7 +9,14 @@ import re
 
 @cli.main(__name__, *sys.argv[1:])
 def main(*argv):
-  parser = argparse.ArgumentParser(description=__doc__)
+  """CLI launcher function
+
+  Args:
+    argv: Command-line arguments
+
+  Returns:
+    int: Exit code"""
+  parser = argparse.ArgumentParser(description=globals()["__doc__"])
   parser.add_argument("url", help="GitHub URL")
   parser.add_argument(
     "-p", "--pattern",
