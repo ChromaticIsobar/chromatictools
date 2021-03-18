@@ -27,6 +27,7 @@ setuptools.setup(
   ],
   install_requires=[
     "requests",
+    "numpy",
   ],
   extras_require={
     "docs": [
