@@ -16,3 +16,15 @@ class AssertPrintsMixin:
       yield
       printed = buf.getvalue()
     self.assertEqual(printed, target)
+
+
+class AssertDoesntRaiseMixin:
+  """Mixin class for "doesn't-raise" assertion"""
+  @contextlib.contextmanager
+  def assert_doesnt_raise(self):
+    """Assert that contextual code doesn't raise any exception
+    Use as context manager"""
+    try:
+      yield
+    except Exception as e:
+      raise AssertionError from e
