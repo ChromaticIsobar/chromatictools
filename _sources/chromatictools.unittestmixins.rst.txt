@@ -1,0 +1,7 @@
+chromatictools.unittestmixins module
+====================================
+
+.. automodule:: chromatictools.unittestmixins
+   :members:
+   :undoc-members:
+   :show-inheritance:

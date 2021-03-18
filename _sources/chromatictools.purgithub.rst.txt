@@ -1,0 +1,7 @@
+chromatictools.purgithub module
+===============================
+
+.. automodule:: chromatictools.purgithub
+   :members:
+   :undoc-members:
+   :show-inheritance:

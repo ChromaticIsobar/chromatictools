@@ -1,0 +1,7 @@
+chromatictools.pickle module
+============================
+
+.. automodule:: chromatictools.pickle
+   :members:
+   :undoc-members:
+   :show-inheritance:

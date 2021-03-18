@@ -1,0 +1,22 @@
+chromatictools package
+======================
+
+.. automodule:: chromatictools
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   chromatictools.badges
+   chromatictools.cli
+   chromatictools.colors
+   chromatictools.imports
+   chromatictools.pickle
+   chromatictools.purgithub
+   chromatictools.unitdoctest
+   chromatictools.unittestmixins

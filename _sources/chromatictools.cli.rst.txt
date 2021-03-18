@@ -1,0 +1,7 @@
+chromatictools.cli module
+=========================
+
+.. automodule:: chromatictools.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:

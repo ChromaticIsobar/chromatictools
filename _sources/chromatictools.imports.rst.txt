@@ -1,0 +1,7 @@
+chromatictools.imports module
+=============================
+
+.. automodule:: chromatictools.imports
+   :members:
+   :undoc-members:
+   :show-inheritance:

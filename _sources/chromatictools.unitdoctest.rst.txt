@@ -1,0 +1,7 @@
+chromatictools.unitdoctest module
+=================================
+
+.. automodule:: chromatictools.unitdoctest
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+chromatictools.badges module
+============================
+
+.. automodule:: chromatictools.badges
+   :members:
+   :undoc-members:
+   :show-inheritance:
