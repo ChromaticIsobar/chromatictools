@@ -61,9 +61,10 @@ class RMSEAssertMixin:
     x: np.ndarray,
     y: np.ndarray,
     almost: bool,
-    rmse: float = 0,
     *args,
-    **kwargs):
+    rmse: float = 0,
+    **kwargs
+  ):
     """Assert that the RMSE is equal to a given value
 
     Arguments:
