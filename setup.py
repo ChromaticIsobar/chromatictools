@@ -25,16 +25,9 @@ setuptools.setup(
     "wheel",
   ],
   install_requires=[
-    "gin-config",
-    "numpy",
+    "requests",
   ],
   extras_require={
-    "notebooks": [
-      "jupyter",
-      "matplotlib",
-      "seaborn",
-      "tqdm",
-    ],
     "docs": [
       "sphinx",
       "sphinx_rtd_theme",
@@ -53,5 +46,5 @@ setuptools.setup(
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
   ],
+  python_requires=">=3.6",
 )
-
