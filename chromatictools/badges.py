@@ -4,8 +4,8 @@ Example:
 
 .. code:: bash
 
-  python -m coverage run -m unittest
-  python -m coverage json --omit "*/tests/*,*/venv/*"
+  python -m coverage run --source <module> -m unittest
+  python -m coverage json
   python -m chromatictools.badges coverage"""
 from chromatictools import colors, cli
 import argparse
