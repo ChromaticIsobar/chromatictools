@@ -24,7 +24,9 @@ setuptools.setup(
   setup_requires=[
     "wheel",
   ],
-  install_requires=[],
+  install_requires=[
+    "requests",
+  ],
   extras_require={
     "docs": [
       "sphinx",
