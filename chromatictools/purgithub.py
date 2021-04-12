@@ -26,6 +26,11 @@ def main(*argv):
     help="Pattern for image search"
   )
   parser.add_argument(
+    "-q", "--quiet",
+    dest="verbose",
+    action="store_false",
+  )
+  parser.add_argument(
     "-l", "--left",
     metavar="delimiter",
     dest="left",
@@ -48,11 +53,13 @@ def main(*argv):
   )
   cmd = ("curl", "-X", "PURGE")
   for url in urls:
-    print(*cmd, url)
+    if args.verbose:
+      print(*cmd, url)
     with subprocess.Popen(
       [*cmd, url],
       stdout=subprocess.PIPE,
       stderr=subprocess.PIPE,
     ) as p:
       s = p.stdout.read().decode()
-    print(s, "\n")
+    if args.verbose:
+      print(s, "\n")
