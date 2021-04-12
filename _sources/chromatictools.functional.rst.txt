@@ -1,0 +1,7 @@
+chromatictools.functional module
+================================
+
+.. automodule:: chromatictools.functional
+   :members:
+   :undoc-members:
+   :show-inheritance:

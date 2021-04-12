@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>chromatictools.cli module &mdash; chromatictools 0.0.8 documentation</title>
+  <title>chromatictools.functional module &mdash; chromatictools 0.0.8 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="chromatictools.colors module" href="chromatictools.colors.html" />
-    <link rel="prev" title="chromatictools.badges module" href="chromatictools.badges.html" /> 
+    <link rel="next" title="chromatictools.imports module" href="chromatictools.imports.html" />
+    <link rel="prev" title="chromatictools.colors module" href="chromatictools.colors.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,9 +93,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="chromatictools.html">chromatictools package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="chromatictools.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.badges.html">chromatictools.badges module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">chromatictools.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chromatictools.cli.html">chromatictools.cli module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.colors.html">chromatictools.colors module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chromatictools.functional.html">chromatictools.functional module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">chromatictools.functional module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.imports.html">chromatictools.imports module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.math.html">chromatictools.math module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chromatictools.pickle.html">chromatictools.pickle module</a></li>
@@ -157,7 +157,7 @@
         
           <li><a href="chromatictools.html">chromatictools package</a> &raquo;</li>
         
-      <li>chromatictools.cli module</li>
+      <li>chromatictools.functional module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,21 +174,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-chromatictools.cli">
-<span id="chromatictools-cli-module"></span><h1>chromatictools.cli module<a class="headerlink" href="#module-chromatictools.cli" title="Permalink to this headline">¶</a></h1>
-<p>Utilities for Command-Line Interface applications</p>
+  <div class="section" id="module-chromatictools.functional">
+<span id="chromatictools-functional-module"></span><h1>chromatictools.functional module<a class="headerlink" href="#module-chromatictools.functional" title="Permalink to this headline">¶</a></h1>
+<p>Utilities for handling and wrapping functions</p>
 <dl class="py function">
-<dt id="chromatictools.cli.main">
-<code class="sig-prename descclassname"><span class="pre">chromatictools.cli.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.cli.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decorator for “main” functions of modules</p>
+<dt id="chromatictools.functional.recast_exception">
+<code class="sig-prename descclassname"><span class="pre">chromatictools.functional.</span></code><code class="sig-name descname"><span class="pre">recast_exception</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">…</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Exception</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.functional.recast_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function decorator for wrapping a function: when that function would have
+raised an Exception in <code class="xref py py-data docutils literal notranslate"><span class="pre">type_a</span></code>, now it will return a <code class="xref py py-data docutils literal notranslate"><span class="pre">type_b</span></code>
+exception</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – Module name. Builtin variable <code class="xref py py-data docutils literal notranslate"><span class="pre">__name__</span></code> should be
-passed as argument</p></li>
-<li><p><strong>args</strong> – Positional arguments for execution as main function</p></li>
-<li><p><strong>kwargs</strong> – Keyword arguments for execution as main function</p></li>
+<li><p><strong>type_a</strong> (<em>type</em><em>(</em><em>s</em><em>) </em><em>of exception</em>) – A subclass of <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code> or a tuple
+of subclasses. These exceptions will be recast</p></li>
+<li><p><strong>type_b</strong> (<em>type of exception</em>) – New type for recast exceptions</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Function decorator</p>
 </dd>
 </dl>
 </dd></dl>
@@ -201,8 +205,8 @@ passed as argument</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="chromatictools.colors.html" class="btn btn-neutral float-right" title="chromatictools.colors module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="chromatictools.badges.html" class="btn btn-neutral float-left" title="chromatictools.badges module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="chromatictools.imports.html" class="btn btn-neutral float-right" title="chromatictools.imports module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="chromatictools.colors.html" class="btn btn-neutral float-left" title="chromatictools.colors module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

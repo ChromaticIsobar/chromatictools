@@ -15,6 +15,7 @@ Submodules
    chromatictools.badges
    chromatictools.cli
    chromatictools.colors
+   chromatictools.functional
    chromatictools.imports
    chromatictools.math
    chromatictools.pickle
