@@ -43,7 +43,7 @@ jobs:
     - name: Install test dependencies
       run: python -m pip install -Ur test-requirements.txt
     - name: Run coverage
-      run: python -m coverage run --source chromatictools -m unittest
+      run: python -m coverage run
     - name: Make coverage JSON
       run: python -m coverage json
     - name: Download badge
