@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>chromatictools.pickle module &mdash; chromatictools 0.0.8 documentation</title>
+  <title>chromatictools.pickle module &mdash; chromatictools 0.0.9 documentation</title>
   
 
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -63,7 +66,7 @@
             
             
               <div class="version">
-                0.0.8
+                0.0.9
               </div>
             
           
@@ -88,7 +91,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="chromatictools.html">chromatictools package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="chromatictools.html#submodules">Submodules</a><ul class="current">
@@ -178,8 +181,8 @@
 <span id="chromatictools-pickle-module"></span><h1>chromatictools.pickle module<a class="headerlink" href="#module-chromatictools.pickle" title="Permalink to this headline">¶</a></h1>
 <p>Utilities for pickle</p>
 <dl class="py function">
-<dt id="chromatictools.pickle.pickled_cache">
-<code class="sig-prename descclassname"><span class="pre">chromatictools.pickle.</span></code><code class="sig-name descname"><span class="pre">pickled_cache</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">,</span> </span><span class="pre">property</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#chromatictools.pickle.pickled_cache" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.pickle.pickled_cache">
+<span class="sig-prename descclassname"><span class="pre">chromatictools.pickle.</span></span><span class="sig-name descname"><span class="pre">pickled_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">,</span> </span><span class="pre">property</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#chromatictools.pickle.pickled_cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store the last result of the function call
 in a pickled file (string version)</p>
 <dl class="field-list simple">
@@ -223,8 +226,8 @@ of this decorator</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="chromatictools.pickle.read_pickled">
-<code class="sig-prename descclassname"><span class="pre">chromatictools.pickle.</span></code><code class="sig-name descname"><span class="pre">read_pickled</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'latin1'</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Any</span><a class="headerlink" href="#chromatictools.pickle.read_pickled" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.pickle.read_pickled">
+<span class="sig-prename descclassname"><span class="pre">chromatictools.pickle.</span></span><span class="sig-name descname"><span class="pre">read_pickled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'latin1'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#chromatictools.pickle.read_pickled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read the pickled data in the file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -240,8 +243,8 @@ of this decorator</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="chromatictools.pickle.save_pickled">
-<code class="sig-prename descclassname"><span class="pre">chromatictools.pickle.</span></code><code class="sig-name descname"><span class="pre">save_pickled</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.pickle.save_pickled" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.pickle.save_pickled">
+<span class="sig-prename descclassname"><span class="pre">chromatictools.pickle.</span></span><span class="sig-name descname"><span class="pre">save_pickled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.pickle.save_pickled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save data in a pickled file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

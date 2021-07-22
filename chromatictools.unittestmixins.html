@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>chromatictools.unittestmixins module &mdash; chromatictools 0.0.8 documentation</title>
+  <title>chromatictools.unittestmixins module &mdash; chromatictools 0.0.9 documentation</title>
   
 
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -63,7 +66,7 @@
             
             
               <div class="version">
-                0.0.8
+                0.0.9
               </div>
             
           
@@ -88,7 +91,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="chromatictools.html">chromatictools package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="chromatictools.html#submodules">Submodules</a><ul class="current">
@@ -178,13 +181,13 @@
 <span id="chromatictools-unittestmixins-module"></span><h1>chromatictools.unittestmixins module<a class="headerlink" href="#module-chromatictools.unittestmixins" title="Permalink to this headline">¶</a></h1>
 <p>Mixin classes for unittests</p>
 <dl class="py class">
-<dt id="chromatictools.unittestmixins.AssertDoesntRaiseMixin">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></code><code class="sig-name descname"><span class="pre">AssertDoesntRaiseMixin</span></code><a class="headerlink" href="#chromatictools.unittestmixins.AssertDoesntRaiseMixin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.AssertDoesntRaiseMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></span><span class="sig-name descname"><span class="pre">AssertDoesntRaiseMixin</span></span><a class="headerlink" href="#chromatictools.unittestmixins.AssertDoesntRaiseMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Mixin class for “doesn’t-raise” assertion</p>
 <dl class="py method">
-<dt id="chromatictools.unittestmixins.AssertDoesntRaiseMixin.assert_doesnt_raise">
-<code class="sig-name descname"><span class="pre">assert_doesnt_raise</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.AssertDoesntRaiseMixin.assert_doesnt_raise" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.AssertDoesntRaiseMixin.assert_doesnt_raise">
+<span class="sig-name descname"><span class="pre">assert_doesnt_raise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.AssertDoesntRaiseMixin.assert_doesnt_raise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assert that contextual code doesn’t raise any exception
 Use as context manager</p>
 </dd></dl>
@@ -192,13 +195,13 @@ Use as context manager</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="chromatictools.unittestmixins.AssertPrintsMixin">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></code><code class="sig-name descname"><span class="pre">AssertPrintsMixin</span></code><a class="headerlink" href="#chromatictools.unittestmixins.AssertPrintsMixin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.AssertPrintsMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></span><span class="sig-name descname"><span class="pre">AssertPrintsMixin</span></span><a class="headerlink" href="#chromatictools.unittestmixins.AssertPrintsMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Mixin class for print assertion</p>
 <dl class="py method">
-<dt id="chromatictools.unittestmixins.AssertPrintsMixin.assert_prints">
-<code class="sig-name descname"><span class="pre">assert_prints</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.AssertPrintsMixin.assert_prints" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.AssertPrintsMixin.assert_prints">
+<span class="sig-name descname"><span class="pre">assert_prints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.AssertPrintsMixin.assert_prints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assert that contextual code prints the target string.
 Use as context manager</p>
 <dl class="field-list simple">
@@ -211,30 +214,30 @@ Use as context manager</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="chromatictools.unittestmixins.RMSEAssertMixin">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></code><code class="sig-name descname"><span class="pre">RMSEAssertMixin</span></code><a class="headerlink" href="#chromatictools.unittestmixins.RMSEAssertMixin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.RMSEAssertMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></span><span class="sig-name descname"><span class="pre">RMSEAssertMixin</span></span><a class="headerlink" href="#chromatictools.unittestmixins.RMSEAssertMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Mixin class for assertions based on the RMSE</p>
 <dl class="py method">
-<dt id="chromatictools.unittestmixins.RMSEAssertMixin.assert_almost_equal_rmse">
-<code class="sig-name descname"><span class="pre">assert_almost_equal_rmse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">almost</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.RMSEAssertMixin.assert_almost_equal_rmse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.RMSEAssertMixin.assert_almost_equal_rmse">
+<span class="sig-name descname"><span class="pre">assert_almost_equal_rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">almost</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.RMSEAssertMixin.assert_almost_equal_rmse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="chromatictools.unittestmixins.RMSEAssertMixin.assert_equal_rmse">
-<code class="sig-name descname"><span class="pre">assert_equal_rmse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">almost</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.RMSEAssertMixin.assert_equal_rmse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.RMSEAssertMixin.assert_equal_rmse">
+<span class="sig-name descname"><span class="pre">assert_equal_rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">almost</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.RMSEAssertMixin.assert_equal_rmse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="chromatictools.unittestmixins.SignificantPlacesAssertMixin">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></code><code class="sig-name descname"><span class="pre">SignificantPlacesAssertMixin</span></code><a class="headerlink" href="#chromatictools.unittestmixins.SignificantPlacesAssertMixin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.SignificantPlacesAssertMixin">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">chromatictools.unittestmixins.</span></span><span class="sig-name descname"><span class="pre">SignificantPlacesAssertMixin</span></span><a class="headerlink" href="#chromatictools.unittestmixins.SignificantPlacesAssertMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Mixin class for assertions based on singificant places</p>
 <dl class="py method">
-<dt id="chromatictools.unittestmixins.SignificantPlacesAssertMixin.assert_almost_equal_significant">
-<code class="sig-name descname"><span class="pre">assert_almost_equal_significant</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">places</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.SignificantPlacesAssertMixin.assert_almost_equal_significant" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="chromatictools.unittestmixins.SignificantPlacesAssertMixin.assert_almost_equal_significant">
+<span class="sig-name descname"><span class="pre">assert_almost_equal_significant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">places</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chromatictools.unittestmixins.SignificantPlacesAssertMixin.assert_almost_equal_significant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fail if the two objects are unequal as determined by their
 difference rounded to the given number of significant decimal places
 (default 0)</p>
