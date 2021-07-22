@@ -35,6 +35,10 @@ class TestSingificantPlaces(
     with self.assertRaises(AssertionError):
       self.assert_almost_equal_significant(.000541, .000542, places=2)
 
+  def test_significant_places_zeros(self):
+    """Test the significant places assertion on zeros"""
+    self.assert_almost_equal_significant(.0, -.000, places=7)
+
 
 class TestRMSE(
   unittestmixins.RMSEAssertMixin,

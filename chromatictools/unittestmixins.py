@@ -46,8 +46,11 @@ class SignificantPlacesAssertMixin:
     """Fail if the two objects are unequal as determined by their
     difference rounded to the given number of significant decimal places
     (default 0)"""
+    data = [first, second]
+    if any(data):
+      data = math.mantissa(data)
     return self.assertAlmostEqual(
-      *math.mantissa([first, second]),
+      *data,
       places=places,
       msg=msg,
       delta=delta
