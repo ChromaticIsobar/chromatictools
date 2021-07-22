@@ -22,7 +22,8 @@ docs/source/*.rst
 
 # Coverage
 htmlcov
-.coverage
+.coverage*
+!.coveragerc
 coverage.json
 
 # Pylint

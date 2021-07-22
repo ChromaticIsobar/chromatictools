@@ -1,0 +1,8 @@
+[run]
+command_line = -m unittest
+source = chromatictools
+data_file = .coverage
+
+[json]
+pretty_print = True
+output = coverage.json
