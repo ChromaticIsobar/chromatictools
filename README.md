@@ -3,13 +3,21 @@
 [![Coverage](https://gist.githubusercontent.com/ChromaticIsobar/0836432975c68f652f9868ed24ef696c/raw/chromatictools-coverage-badge.svg)](https://github.com/chromaticisobar/chromatictools/actions?query=workflow%3Amain)
 [![Pylint](https://gist.githubusercontent.com/ChromaticIsobar/956da0682e378a1880d70f242c3315b5/raw/chromatictools-pylint-badge.svg)](https://github.com/chromaticisobar/chromatictools/actions?query=workflow%3Amain)
 [![PyPI version](https://badge.fury.io/py/chromatictools.svg)](https://badge.fury.io/py/chromatictools)
+[![Anaconda-Server Badge](https://anaconda.org/chromaticisobar/chromatictools/badges/version.svg)](https://anaconda.org/chromaticisobar/chromatictools)
 
 This is a collection of utilities that I often use when writing other software
 
 ## Install
+
+### PyPI
 You can install the `chromatictools` package from [PyPI](https://pypi.org/project/chromatictools) via pip
 
 ```pip install chromatictools```
+
+### Conda
+You can install the `chromatictools` package from [Anaconda](https://anaconda.org/ChromaticIsobar/chromatictools) with conda
+
+```conda install -c chromaticisobar chromatictools```
 
 ## Documentation
 API documentation can be found online here:
