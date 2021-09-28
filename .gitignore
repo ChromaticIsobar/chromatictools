@@ -6,6 +6,10 @@ build
 dist
 .ipynb_checkpoints
 
+# Conda
+conda_build
+conda_packages
+
 # Sphinx
 docs/build
 docs/pylintrc
