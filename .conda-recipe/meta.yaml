@@ -1,0 +1,43 @@
+{% set name = "chromatictools" %}
+{% set data = load_setup_py_data() %}
+
+package:
+  name: {{ name }}
+  version: {{ data["version"] }}
+
+source:
+  path: ..
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --use-feature=in-tree-build --no-deps --ignore-installed"
+
+requirements:
+  host:
+    - numpy
+    - pip
+    - python
+    - requests
+  run:
+    - numpy
+    - python
+    - requests
+
+test:
+  imports:
+    - {{ name }}
+
+about:
+  home: {{ data["url"] }}
+  license: MIT
+  license_family: MIT
+  license_file: ../LICENSE
+  summary: chromatictools
+  doc_url: https://chromaticisobar.github.io/chromatictools
+  dev_url: https://github.com/chromaticisobar/chromatictools
+
+extra:
+  recipe-maintainers:
+    - ChromaticIsobar
+
